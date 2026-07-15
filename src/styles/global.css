@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dali-rose: #E5B3A6;
+  --color-dali-matcha: #A3B18A;
+  --color-dali-terracotta: #DDB892;
+  --color-dali-toast: #B08968;
+  --color-dali-dark: #3D342E; /* Marrón café oscuro en vez de negro */
+  --color-dali-paper: #FDFBF7; /* Crema Pinterest super cálido */
+
+  --font-sans: "Outfit", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+/* Puntos más sutiles y orgánicos */
+.bg-dots {
+  background-image: radial-gradient(rgba(61, 52, 46, 0.07) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  background-color: #FDFBF7;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 26s linear infinite;
+}

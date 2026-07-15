@@ -1,0 +1,80 @@
+---
+import { Plus } from 'lucide-react';
+
+// Array de preguntas frecuentes actualizado con la cotización MEP
+const faqs = [
+  {
+    
+    question: "¿Cuáles son los métodos de pago?",
+    answer: "Podés abonar en dólares (Cripto/USDT) o mediante transferencia bancaria en pesos argentinos. Si elegís abonar en pesos, se toma la cotización del Dólar MEP del momento del pago. El proyecto siempre se divide en un 50% de seña para reservar tu lugar y arrancar, y el 50% restante al entregar la web."
+  },
+  {
+    
+    question: "¿Qué necesito para empezar?",
+    answer: "Una vez abonada la seña, te envío un breve cuestionario (brief) para conocer tu marca, tus objetivos y los servicios que ofrecés. Con esa información, yo me encargo de armar toda la estructura y los textos."
+  },
+  {
+    
+    question: "¿El hosting y el dominio están incluidos?",
+    answer: "No están incluidos en el presupuesto de diseño, ya que son servicios de pago anual que quedan a tu nombre. Sin embargo, te asesoro paso a paso sobre cuáles comprar y cómo hacerlo de forma súper sencilla."
+  },
+  {
+    
+    question: "¿Tengo que tener un logo o identidad visual?",
+    answer: "Si tenés un logo y colores de marca, ¡genial! Los adaptamos a la web. Si no tenés nada, no te preocupes: el servicio incluye una curaduría visual donde definimos una paleta de colores y tipografías que transmitan la esencia de tu negocio."
+  }
+];
+---
+
+<section id="faq" class="py-24 relative">
+  <!-- Elemento decorativo de fondo -->
+  <div class="absolute top-0 right-1/4 w-[300px] h-[300px] bg-violet-400/10 rounded-full blur-[80px] -z-10 pointer-events-none"></div>
+
+  <div class="max-w-3xl mx-auto px-4 md:px-8">
+    <div class="text-center mb-16">
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl text-dali-dark uppercase tracking-tight mb-4">
+        Dudas Frecuentes
+      </h2>
+      <p class="text-dali-dark/60 font-medium text-lg">
+        Todo lo que necesitas saber antes de arrancar tu proyecto.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      {faqs.map((faq) => (
+        <details class="group bg-white/60 backdrop-blur-sm border border-violet-100 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.02)] [&_summary::-webkit-details-marker]:hidden">
+          
+          <summary class="flex items-center justify-between cursor-pointer list-none p-6 text-lg font-bold text-dali-dark hover:text-violet-600 transition-colors">
+            <div class="flex items-center gap-3">
+              
+              <span>{faq.question}</span>
+            </div>
+            
+            <!-- Icono Plus que rota a X -->
+            <span class="text-violet-600 group-open:rotate-45 transition-transform duration-300 flex-shrink-0 select-none bg-violet-100 p-1.5 rounded-full">
+              <Plus size={24} strokeWidth={2.5} />
+            </span>
+          </summary>
+          
+          <div class="px-6 pb-6 pt-2 text-dali-dark/70 font-medium leading-relaxed animate-[fadeIn_0.3s_ease-in-out]">
+            <p>{faq.answer}</p>
+          </div>
+          
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

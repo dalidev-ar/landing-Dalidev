@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.jsx';
+import Marquee from '../components/Marquee.astro';
+import Services from '../components/Services.astro';
+//import Portfolio from '../components/Portfolio.astro';
+import Faq from '../components/Faq.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+	title="Dali Dev | Diseño & Desarrollo Web Premium" 
+	description="Sitios web estéticos, rápidos y con alma Pinterest hechos a código puro."
+>
+	<Navbar />
+	<Hero client:load />
+	<Marquee />
+	<Services />
+	{/* <Portfolio /> */}
+	<Faq />
+	<Contact />
+	<Footer />
+</Layout>

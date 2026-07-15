@@ -1,0 +1,141 @@
+---
+import { Compass, Layers, MessageCircle } from 'lucide-react';
+
+// Configuramos los enlaces de WhatsApp para cada paquete
+const whatsappNumber = "5491112345678"; // Cambiá esto por tu número real
+
+const msgLanding = encodeURIComponent("¡Hola Dali! Me interesa arrancar con el pack de Landing Page 🚀. ¿Me contás más?");
+const linkLanding = `https://wa.me/${whatsappNumber}?text=${msgLanding}`;
+
+const msgMultipage = encodeURIComponent("¡Hola Dali! Me encantó tu web. Quiero avanzar con el pack de Sitio Multipage ✨.");
+const linkMultipage = `https://wa.me/${whatsappNumber}?text=${msgMultipage}`;
+---
+
+<section id="servicios" class="py-24 scroll-mt-20">
+  <div class="text-center max-w-2xl mx-auto mb-16 px-4">
+    <h2 class="font-display font-extrabold text-4xl md:text-5xl text-dali-dark uppercase tracking-tight">
+      Servicios Llave en Mano
+    </h2>
+    <p class="text-dali-dark/60 font-medium mt-3 text-base md:text-lg">
+      Te olvidás de renegar con los textos o las imágenes. En Dali Dev, ambos paquetes incluyen todo el proceso estratégico y estético.
+    </p>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto px-4">
+    
+    <!-- PACK 1: LANDING PAGE -->
+    <div class="bg-white/50 backdrop-blur-sm border border-dali-dark/5 p-8 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.03)] flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+      <div>
+        <div class="bg-cyan-100 text-cyan-600 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+          <Compass size={28} strokeWidth={2} />
+        </div>
+        <h3 class="font-display font-extrabold text-3xl text-dali-dark mb-1">Landing Page</h3>
+        <p class="text-dali-dark/50 font-semibold text-sm mb-6">Ideal para lanzar un servicio, infoproducto o campaña específica.</p>
+        
+        <hr class="border-dali-dark/5 my-4" />
+        
+        <div class="mb-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-cyan-600 block mb-3">✨ Contiene:</span>
+          <ul class="space-y-3 text-sm font-medium text-dali-dark/80">
+            <li class="flex items-start gap-2">✔ <span class="leading-tight"><strong>Estructura Web Completa:</strong> Diseño y desarrollo a medida en una sección única de alto impacto.</span></li>
+            <li class="flex items-start gap-2">✔ <span class="leading-tight"><strong>Redacción de contenidos (Copywriting):</strong> Escribo y estructuro tus textos para que enganchen y vendan.</span></li>
+            <li class="flex items-start gap-2">✔ <span class="leading-tight"><strong>Curaduría visual:</strong> Selección estética de imágenes y paleta de colores estilo Pinterest.</span></li>
+            <li class="flex items-start gap-2">✔ <span class="leading-tight">Formulario de contacto personalizado o enlace optimizado a tu WhatsApp.</span></li>
+            <li class="flex items-start gap-2">✔ <span class="leading-tight">Código ultra veloz con Astro, 100% accesible y adaptable a celulares.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-dali-dark/10 pt-6 mt-6 flex flex-col gap-6">
+        <!-- Precio y Tiempo -->
+        <div class="flex items-end justify-between">
+          <div>
+            <span class="text-xs font-bold text-dali-dark/40 uppercase tracking-wider block mb-1">Inversión</span>
+            <div class="flex items-baseline gap-1">
+              <span class="font-display font-black text-4xl text-dali-dark">$140</span>
+              <span class="font-bold text-lg text-dali-dark/50">USD</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <span class="text-xs font-bold text-dali-dark/40 uppercase tracking-wider block mb-1">Entrega</span>
+            <span class="inline-block bg-cyan-100 text-cyan-700 text-xs font-bold px-3 py-1.5 rounded-full">
+              ⏳ 3 días
+            </span>
+          </div>
+        </div>
+
+        <!-- Botón CTA -->
+        <a 
+          href={linkLanding}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full flex items-center justify-center gap-2 bg-dali-dark text-white font-bold text-lg py-4 rounded-xl hover:bg-cyan-600 hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300"
+        >
+          <MessageCircle size={20} />
+          Reservar Landing
+        </a>
+      </div>
+    </div>
+
+    <!-- PACK 2: SITIO MULTIPAGE -->
+    <div class="bg-white/70 backdrop-blur-sm border-2 border-violet-200 p-8 rounded-[2rem] shadow-[0_25px_60px_rgba(139,92,246,0.1)] flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+      <div class="absolute top-4 right-4 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">
+        El más elegido
+      </div>
+      
+      <div>
+        <div class="bg-violet-100 text-violet-600 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+          <Layers size={28} strokeWidth={2} />
+        </div>
+        <h3 class="font-display font-extrabold text-3xl text-dali-dark mb-1">Sitio Multipage</h3>
+        <p class="text-dali-dark/50 font-semibold text-sm mb-6">Para marcas o profesionales que necesitan profundidad y espacio.</p>
+        
+        <hr class="border-violet-100 my-4" />
+        
+        <div class="mb-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-violet-600 block mb-3">✨ Contiene:</span>
+          <ul class="space-y-3 text-sm font-medium text-dali-dark/80">
+            <li class="flex items-start gap-2">✔ <span class="leading-tight"><strong>Estructura Web Completa:</strong> Hasta 4 o 5 páginas internas a medida (Inicio, Sobre Mí, Servicios, Contacto).</span></li>
+            <li class="flex items-start gap-2">✔ <span class="leading-tight"><strong>Redacción de contenidos (Copywriting):</strong> Desarrollo el tono de voz de tu marca y escribo todas las secciones.</span></li>
+            <li class="flex items-start gap-2">✔ <span class="leading-tight"><strong>Curaduría visual:</strong> Identidad visual web pulida y selección de fotografía de stock premium.</span></li>
+            <li class="flex items-start gap-2">✔ <span class="leading-tight">Estructura SEO básica configurada para que empieces a aparecer en Google.</span></li>
+            <li class="flex items-start gap-2">✔ <span class="leading-tight">Animaciones fluidas y soporte personalizado por 30 días post-lanzamiento.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-violet-100 pt-6 mt-6 flex flex-col gap-6">
+        <!-- Precio y Tiempo -->
+        <div class="flex items-end justify-between">
+          <div>
+            <span class="text-xs font-bold text-dali-dark/40 uppercase tracking-wider block mb-1">Inversión</span>
+            <div class="flex items-baseline gap-1">
+              <span class="font-display font-black text-4xl text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-fuchsia-600">
+                $280
+              </span>
+              <span class="font-bold text-lg text-dali-dark/50">USD</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <span class="text-xs font-bold text-dali-dark/40 uppercase tracking-wider block mb-1">Entrega</span>
+            <span class="inline-block bg-violet-100 text-violet-700 text-xs font-bold px-3 py-1.5 rounded-full">
+              ⏳ 7 días 
+            </span>
+          </div>
+        </div>
+
+        <!-- Botón CTA -->
+        <a 
+          href={linkMultipage}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white font-bold text-lg py-4 rounded-xl hover:shadow-lg hover:shadow-violet-500/40 hover:-translate-y-0.5 transition-all duration-300"
+        >
+          <MessageCircle size={20} />
+          Reservar Sitio Completo
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
